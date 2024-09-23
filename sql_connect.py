@@ -2,7 +2,7 @@ import sqlite3
 import os
 
 imgs = []
-for fname in os.listdir('photo'):
+for fname in sorted(os.listdir('photo')):
     with open(f'photo/{fname}', 'rb') as f:
         imgs += [f.read()]
 
